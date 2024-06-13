@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+   
+</head>
+<body>
+    <form>
+        <div class="wrapper">
+
+       
+            <h3>login</h3>
+            <div class="input-box">
+                <input type="text" placeholder="login" id="login">
+                <i class='bx bxs-user'></i>
+            </div>
+        
+            <div class="input-box">
+                <input type="password" placeholder="senha" id="senha"> 
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+        
+            <input type="submit" class="btn" onclick="logar(); return false"> 
+        </div>
+    </form>
+
+    <script>
+        function logar(){
+
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+
+            if(login == "admin" && senha == "admin"){
+                alert('Sucesso');
+                location.href="index.html";
+            }else{
+                alert('Usuario ou senha incorrentos');
+            }
+        }
+    </script>
+</body>
+</html>
